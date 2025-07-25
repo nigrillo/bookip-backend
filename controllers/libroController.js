@@ -1,3 +1,4 @@
+// controllers/libroController.js
 import Libro from '../models/Libro.js';
 
 export const crearLibro = async (req, res) => {
@@ -12,8 +13,8 @@ export const crearLibro = async (req, res) => {
 };
 
 export const obtenerLibros = async (req, res) => {
-  const { userId, q, estado } = req.query;
-  const filtro = { userId };
+  const { usuarioId, q, estado } = req.query;
+  const filtro = { userId: usuarioId };
 
   if (q) {
     filtro.$or = [
