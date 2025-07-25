@@ -10,7 +10,11 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
+// CORS con origen específico
+app.use(cors({
+  origin: 'https://bookip.netlify.app'
+}));
+
 app.use(express.json());
 
 // Conexión a MongoDB
