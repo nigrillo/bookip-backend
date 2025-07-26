@@ -12,7 +12,8 @@ const PORT = process.env.PORT || 3001;
 
 // CORS con origen específico
 app.use(cors({
-  origin: 'https://bookip.netlify.app'
+  origin: 'https://bookip.netlify.app',
+  credentials: true
 }));
 
 app.use(express.json());
